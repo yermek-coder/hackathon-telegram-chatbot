@@ -1,0 +1,32 @@
+{
+  "name": "hackathon-telegram-chatbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "train": "node src/train.js",
+    "migrate": "node src/migrate.js",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/community": "^0.3.24",
+    "@langchain/openai": "^0.3.16",
+    "@supabase/supabase-js": "^2.47.12",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "fluent-ffmpeg": "^2.1.3",
+    "langchain": "^0.3.11",
+    "node-telegram-bot-api": "^0.66.0",
+    "openai": "^4.77.3",
+    "puppeteer": "^24.0.0",
+    "underscore": "^1.13.7",
+    "youtube-dl-exec": "^3.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
