@@ -21,11 +21,20 @@ class TelegramService {
                     this.conversations.set(msg.chat.id, threadId);
                 }
 
+                // Handle the /start command
+                if (text === '/start') {
+                    await this.bot.sendMessage(
+                        msg.chat.id,
+                        'Вас приветствует чат-бот команды Латокен! Чем могу вам помочь?'
+                    );
+                    return;
+                }
+
                 const response = await this.chatgpt.sendMessage(threadId, msg.text);
                 await this.sendMessage(msg.chat.id, response);
             } catch (error) {
                 console.error('Error:', error);
-                await this.bot.sendMessage(msg.chat.id, 'Sorry, there was an error processing your message.');
+                await this.bot.sendMessage(msg.chat.id, 'Извините, у нас техническая ошибка!');
             }
         });
     }

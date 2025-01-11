@@ -16,7 +16,7 @@ class OpenAIService {
             batchSize: 512,
             stripNewLines: true
         });
-        this.instructions = "You are chatbot";
+        this.instructions = "Ты AI бот. Ты помогаешь узнавать пользователям детали работы в Латокен и процессе интервью. Будь вежлив и услужлив. Отвечай всегда на языке собеседника";
         this.initializeAssistant();
     }
 
