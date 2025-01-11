@@ -22,7 +22,7 @@ class TelegramService {
                 }
 
                 // Handle the /start command
-                if (text === '/start') {
+                if (msg.text === '/start') {
                     await this.bot.sendMessage(
                         msg.chat.id,
                         'Вас приветствует чат-бот команды Латокен! Чем могу вам помочь?'

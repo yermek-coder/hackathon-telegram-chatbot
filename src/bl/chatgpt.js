@@ -28,7 +28,7 @@ class OpenAIService {
             const assistant = await this.openai.beta.assistants.create({
                 name: "Telegram Helper",
                 instructions: this.instructions,
-                model: "gpt-4-turbo-preview",
+                model: "gpt-40",
                 tools: [{ type: "retrieval" }]
             });
             this.assistantId = assistant.id;
